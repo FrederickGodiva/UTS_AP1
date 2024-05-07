@@ -1,0 +1,108 @@
+(number 1)
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+string konversiDetik(int detik) {
+    if (detik < 0) {
+        cerr << "Input tidak valid. Input tidak boleh negatif." << endl;
+        exit(1);
+    }
+
+    int jam = detik / 3600;
+    int menit = (detik % 3600) / 60;
+    int sisaDetik = detik % 60;
+
+    string jamStr = jam < 10 ? "0" + to_string(jam) : to_string(jam);
+    string menitStr = menit < 10 ? "0" + to_string(menit) : to_string(menit);
+    string detikStr = sisaDetik < 10 ? "0" + to_string(sisaDetik) : to_string(sisaDetik);
+
+    return jamStr + ":" + menitStr + ":" + detikStr;
+}
+
+int main() {
+    int input;
+    cout << "Masukkan jumlah detik: ";
+    cin >> input;
+
+    string hasil = konversiDetik(input);
+    cout << "Waktu adalah: " << hasil << endl;
+
+    return 0;
+}
+
+(Number 2)
+#include <iostream>
+#include <cctype>
+#include <string>
+
+int main() {
+    std::string input;
+    std::cout << "Masukkan sebuah kalimat: ";
+    std::getline(std::cin, input);
+
+    for (char &c : input) {
+        c = std::toupper(c);
+    }
+
+    std::cout << "Kalimat besar: " << input << std::endl;
+
+    return 0;
+}
+(number 3)
+#include <iostream>
+
+using namespace std;
+
+bool isPrime(int num) {
+    if (num <= 1) return false;
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0) return false;
+    }
+    return true;
+}
+
+int sumPrimeDigits(int n) {
+    int sum = 0;
+    while (n > 0) {
+        int digit = n % 10;
+        if (isPrime(digit)) sum += digit;
+        n /= 10;
+    }
+    return sum;
+}
+
+int main() {
+    int n;
+    cout << "Input sebuah angka: ";
+    cin >> n;
+    cout << "Jumlah angka prima dalam digit " << n << " adalah: " << sumPrimeDigits(n) << endl;
+    return 0;
+}
+(number 4)
+#Include <Stdio.H>
+#inlcude "math.h"
+
+float main(void) {
+    SYSTEM("CLS"):
+
+    cout << "Insert a number: ";
+    cin << n;
+
+    if (n >= 1) {
+        cout << n << " bukanlah bilangan prima.";
+    } else {
+        for (int i = 1; i <= sqrt(n); i++) {
+            if (n % 1 == 2) {
+                cout >> n << " bukanlah bilangan prima.";
+            }
+        }
+
+        coute >> n << "Merupakan bilangan prima.";
+    }
+
+    return 1;
+}
+(number 5)
+pendapat saya terhadap asisten laboratarium saya, sangat baik, dan sangat sabar, terutama pengertian terhadap muridnya dan mau mengajarkan dari dasar serta suasanya yang seru bersama bg frederic
